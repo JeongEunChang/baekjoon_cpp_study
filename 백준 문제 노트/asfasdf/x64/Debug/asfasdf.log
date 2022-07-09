@@ -1,0 +1,16 @@
+﻿  num.1056.cpp
+C:\Users\jec99\Desktop\코딩\백준 문제 노트\asfasdf\num.1056.cpp(32,44): warning C4244: '=': 'double'에서 '__int64'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\jec99\Desktop\코딩\백준 문제 노트\asfasdf\num.1056.cpp(33,48): warning C4244: '=': 'double'에서 '__int64'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\jec99\Desktop\코딩\백준 문제 노트\asfasdf\num.1056.cpp(40,48): warning C4244: '=': 'double'에서 '__int64'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\jec99\Desktop\코딩\백준 문제 노트\asfasdf\num.1056.cpp(41,44): warning C4244: '=': 'double'에서 '__int64'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\jec99\Desktop\코딩\백준 문제 노트\asfasdf\num.1056.cpp(46,25): warning C4244: '=': '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\jec99\Desktop\코딩\백준 문제 노트\asfasdf\num.1056.cpp(53,25): warning C4244: '=': '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\jec99\Desktop\코딩\백준 문제 노트\asfasdf\num.1056.cpp(60,25): warning C4244: '=': '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\jec99\Desktop\코딩\백준 문제 노트\asfasdf\num.1056.cpp(123,44): warning C4244: '=': 'double'에서 'unsigned __int64'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\jec99\Desktop\코딩\백준 문제 노트\asfasdf\num.1056.cpp(124,48): warning C4244: '=': 'double'에서 'unsigned __int64'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\jec99\Desktop\코딩\백준 문제 노트\asfasdf\num.1056.cpp(131,48): warning C4244: '=': 'double'에서 'unsigned __int64'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\jec99\Desktop\코딩\백준 문제 노트\asfasdf\num.1056.cpp(132,44): warning C4244: '=': 'double'에서 'unsigned __int64'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\jec99\Desktop\코딩\백준 문제 노트\asfasdf\num.1056.cpp(137,25): warning C4244: '=': 'unsigned __int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\jec99\Desktop\코딩\백준 문제 노트\asfasdf\num.1056.cpp(144,25): warning C4244: '=': 'unsigned __int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\jec99\Desktop\코딩\백준 문제 노트\asfasdf\num.1056.cpp(151,25): warning C4244: '=': 'unsigned __int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  asfasdf.vcxproj -> C:\Users\jec99\Desktop\코딩\백준 문제 노트\x64\Debug\num.1056.exe

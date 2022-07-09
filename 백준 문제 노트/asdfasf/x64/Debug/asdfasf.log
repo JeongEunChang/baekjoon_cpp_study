@@ -1,0 +1,17 @@
+﻿  asdfasf.cpp
+C:\Users\jec99\Desktop\코딩\백준 문제 노트\asdfasf\asdfasf.cpp(29,9): warning C4477: 'scanf' : 서식 문자열 '%s'에 'char *' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'char **'입니다.
+C:\Users\jec99\Desktop\코딩\백준 문제 노트\asdfasf\asdfasf.cpp(30,6): error C2664: 'int strcmp(const char *,const char *)': 인수 1을(를) 'char *[6]'에서 'const char *'(으)로 변환할 수 없습니다.
+C:\Users\jec99\Desktop\코딩\백준 문제 노트\asdfasf\asdfasf.cpp(30,14): message : 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트가 필요합니다.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\string.h(100,13): message : 'strcmp' 선언을 참조하십시오.
+C:\Users\jec99\Desktop\코딩\백준 문제 노트\asdfasf\asdfasf.cpp(35,11): error C2664: 'int strcmp(const char *,const char *)': 인수 1을(를) 'char *[6]'에서 'const char *'(으)로 변환할 수 없습니다.
+C:\Users\jec99\Desktop\코딩\백준 문제 노트\asdfasf\asdfasf.cpp(35,19): message : 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트가 필요합니다.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\string.h(100,13): message : 'strcmp' 선언을 참조하십시오.
+C:\Users\jec99\Desktop\코딩\백준 문제 노트\asdfasf\asdfasf.cpp(36,11): error C2664: 'int strcmp(const char *,const char *)': 인수 1을(를) 'char *[6]'에서 'const char *'(으)로 변환할 수 없습니다.
+C:\Users\jec99\Desktop\코딩\백준 문제 노트\asdfasf\asdfasf.cpp(36,19): message : 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트가 필요합니다.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\string.h(100,13): message : 'strcmp' 선언을 참조하십시오.
+C:\Users\jec99\Desktop\코딩\백준 문제 노트\asdfasf\asdfasf.cpp(37,11): error C2664: 'int strcmp(const char *,const char *)': 인수 1을(를) 'char *[6]'에서 'const char *'(으)로 변환할 수 없습니다.
+C:\Users\jec99\Desktop\코딩\백준 문제 노트\asdfasf\asdfasf.cpp(37,19): message : 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트가 필요합니다.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\string.h(100,13): message : 'strcmp' 선언을 참조하십시오.
+C:\Users\jec99\Desktop\코딩\백준 문제 노트\asdfasf\asdfasf.cpp(38,11): error C2664: 'int strcmp(const char *,const char *)': 인수 1을(를) 'char *[6]'에서 'const char *'(으)로 변환할 수 없습니다.
+C:\Users\jec99\Desktop\코딩\백준 문제 노트\asdfasf\asdfasf.cpp(38,19): message : 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트가 필요합니다.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\string.h(100,13): message : 'strcmp' 선언을 참조하십시오.
