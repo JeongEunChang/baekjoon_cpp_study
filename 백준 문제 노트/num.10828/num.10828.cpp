@@ -24,7 +24,7 @@ int main()
     stack = new int[N];
 
 
-    
+
     for (int i = 0; i < N; i++) {
         cin >> order;
 
@@ -61,10 +61,10 @@ void pop()
         cout << -1 << endl;
 
     else if (length > 0) {
-        cout << stack[length-1] << endl;;
-        stack[length-1] = NULL;
+        cout << stack[length - 1] << endl;;
+        stack[length - 1] = NULL;
         length--;
-        }
+    }
 }
 
 void size()
@@ -83,7 +83,7 @@ void empty()
 void top()
 {
     if (length > 0)
-        cout << stack[length-1] << endl;
+        cout << stack[length - 1] << endl;
     else if (length == 0)
         cout << -1 << endl;
 }
