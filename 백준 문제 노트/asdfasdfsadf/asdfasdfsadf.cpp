@@ -6,10 +6,26 @@
 
 using namespace std;
 
+void Sum(int a, int b, int& Sum)
+{
+    Sum = (a + b);
+}
+
 
 int main()
 {
-    int a[3] = { 1, 2, 3 };
+    int a = 5;
+    int b = 3;
+
+    int sum = 0;
+    int as[500];
+
+    for (int i = 1; i < 501; i++)
+    {
+        sum += i;
+    }
+
+    cout << sum;
 
     //cout << a[A - 65];
 
