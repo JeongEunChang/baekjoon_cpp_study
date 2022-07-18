@@ -1,33 +1,48 @@
-﻿// asdfasdfsadf.cpp : 이 파일에는 'main' 함수가 포함됩니다. 거기서 프로그램 실행이 시작되고 종료됩니다.
-//
-
+﻿#define FASTIO ios::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL);
+#define pii pair<int, int>
+#define ll long long
+#define llu unsigned long long
+#define x first
+#define y second
+#include <cmath>
 #include <iostream>
-#include <algorithm>
 
 using namespace std;
 
-void Sum(int a, int b, int& Sum)
+int n, arr[8], ans;
+bool visited[8];
+
+void dfs(int cnt, int sum, int pre)
 {
-    Sum = (a + b);
+    if (cnt == n)
+    {
+        ans = max(ans, sum);
+        return;
+    }
+
+    for (int i = 0; i < n; i++)
+    {
+        if (visited[i])
+            continue;
+        visited[i] = 1;
+        dfs(cnt + 1, cnt == 0 ? 0 : (sum + abs(pre - arr[i])), arr[i]);
+        visited[i] = 0;
+    }
 }
 
+void Solution()
+{
+    cin >> n;
+    for (int i = 0; i < n; i++)
+        cin >> arr[i];
+
+    dfs(0, 0, 0);
+
+    cout << ans;
+}
 
 int main()
 {
-    int a = 5;
-    int b = 3;
-
-    int sum = 0;
-    int as[500];
-
-    for (int i = 1; i < 501; i++)
-    {
-        sum += i;
-    }
-
-    cout << sum;
-
-    //cout << a[A - 65];
-
-
+    FASTIO
+        Solution();
 }
