@@ -16,7 +16,6 @@ set<string> CheckSame;
 vector<int> EndCheck;
 int Result;
 bool Check[10000002];
-//string MadeValue;
 
 bool CheckPrimeNumber(int Value)
 {
@@ -25,21 +24,7 @@ bool CheckPrimeNumber(int Value)
 
     int Checking = (int)sqrt(Value);
 
-    /*for (int i = 2; i < Checking; i++)
-    {
-        for (int j = 2; j * i <= Checking; j++)
-        {
-            if (Eratos[i * j] == true)
-            {
-                continue;
-            }
 
-            else
-            {
-                Eratos[i * j] = true;
-            }
-        }
-    }*/
 
     for (int i = 2; i <= Checking; i++)
     {
@@ -57,14 +42,10 @@ void MakeNumber(int Now, int Length, string Input, string MadeValue, bool Visite
 {
     if (Now == Length)
     {
-        /*if (CheckPrimeNumber(stoi(MadeValue)))
-            Result++;*/
-
         if (Check[stoi(MadeValue)] != true)
         {
             int tmp = stoi(MadeValue);
             Check[tmp] = true;
-            //s_RelocateNum.insert(stoi(MadeValue));
             
             if (CheckPrimeNumber(tmp))
                 Result++;
@@ -98,7 +79,7 @@ void MakeNumber(int Now, int Length, string Input, string MadeValue, bool Visite
 
 int main()
 {
-    for (int i = 2; i < 3200; i++)
+    for (int i = 2; i < 1601; i++)
     {
         for (int j = 2; j * i <= 3200; j++)
         {

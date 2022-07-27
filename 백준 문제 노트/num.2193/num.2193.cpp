@@ -1,40 +1,36 @@
 ﻿#include <iostream>
-
 using namespace std;
 
 long long Result = 0;
 int N;
-int Arr[91];
-
-void FindResult(int Count, int Index, int Value, int PreValue)
-{
-    if (Index >= N - 1)
-    {
-        Result++;
-        return;
-    }
-
-    Arr[Index];
-
-    int Next;
-
-    if (Value == 1)
-    {
-        Next = 0;
-    }
-
-    else
-        Next = 1;
-
-    FindResult(Count, Index + 1, 0, Value);
-}
-
 
 int main()
 {
     cin >> N;
 
-    FindResult(0, 1, 0, 0);
+    int index = 2;
+    long long Arr[90];
+    Arr[0] = 1;
+    Arr[1] = 1;
+
+    if (N == 1)
+    {
+        cout << 1;
+        return 0;
+    }
+
+    else if (N == 2)
+    {
+        cout << 1;
+        return 0;
+    }
+
+    while (index <= N - 1)
+    {
+        Result = Arr[index - 1] + Arr[index - 2];
+        Arr[index] = Result;
+        index++;
+    }
 
     cout << Result;
 }

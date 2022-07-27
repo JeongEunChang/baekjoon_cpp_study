@@ -2,14 +2,16 @@
 //
 #include <algorithm>
 #include <iostream>
+#include <stdio.h>
+#pragma warning (disable:4996)
 using namespace std;
 
 int main()
 {
-    char arr[7] = "56780";
-    string asd = "48351";
-    arr = asd.
-    sort(arr, arr + 6);
+    int a = 0;
+    int b = 0;
 
-    std::cout << ()asdr;
+    scanf("%d %d", &a, &b);
+
+    std::cout << a << b;
 }
