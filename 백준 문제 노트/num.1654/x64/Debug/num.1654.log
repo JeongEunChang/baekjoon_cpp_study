@@ -1,0 +1,4 @@
+﻿  num.1654.cpp
+C:\Users\jec99\Documents\GitHub\baekjoon_cpp_study\백준 문제 노트\num.1654\num.1654.cpp(27,27): warning C4244: '+=': '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\jec99\Documents\GitHub\baekjoon_cpp_study\백준 문제 노트\num.1654\num.1654.cpp(68,16): warning C4244: '인수': '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  num.1654.vcxproj -> C:\Users\jec99\Documents\GitHub\baekjoon_cpp_study\백준 문제 노트\x64\Debug\num.1654.exe

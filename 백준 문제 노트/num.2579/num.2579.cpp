@@ -1,75 +1,42 @@
 ﻿#include <iostream>
+#include <algorithm>
 #include <vector>
-
 using namespace std;
-// 3 12 3     4  5
-int StairsNum;
-vector<int> vec;
-int Arr[1000][5000];
-int Result;
 
-void FindResult(int Sum, int Now, int OverlapCount, int NodeCount)
-{
-    NodeCount++;
-
-    if (Now > StairsNum)
-    {
-        return;
-    }
-    Sum += vec[Now];
-    OverlapCount++;
-
-    if (OverlapCount != 3)
-    {
-        if (Now == StairsNum)
-        {
-            if (Result < Sum)
-                Result = Sum;
-
-            return;
-        }
-
-        if (Arr[Now][NodeCount] == 0)
-            Arr[Now][NodeCount] = Sum;
-
-        else if (Arr[Now][NodeCount] != 0)
-        {
-            if (Arr[Now][NodeCount] < Sum)
-                Arr[Now][NodeCount] = Sum;
-
-            else
-                return;
-        }
-        FindResult(Sum, Now + 1, OverlapCount, NodeCount);
-
-        FindResult(Sum, Now + 2, 0, NodeCount);
-    }
-
-    else if (OverlapCount == 3)
-    {
-        return;
-    }
-}
+int Array[301];
+int DP[301];
+int Stairs;
 
 int main()
 {
-    cin >> StairsNum;
-    vec.push_back(0);
+    cin >> Stairs;
 
-    int Sum = 0;
-    int OverlapCount = -1;
-
-    for (int i = 0; i < StairsNum; i++)
+    for (int i = 1; i <= Stairs; i++)
     {
-        int Input;
-
-        cin >> Input;
-
-        vec.push_back(Input);
+        cin >> Array[i];
     }
 
+    if (Stairs == 1)
+    {
+        DP[Stairs] = Array[1];
+    }
 
-    FindResult(Sum, 0, OverlapCount, -1);
+    else if (Stairs == 2)
+    {
+        DP[Stairs] = Array[1] + Array[2];
+    }
+    
+    else
+    {
+        DP[0] = 0;
+        DP[1] = Array[1];
+        DP[2] = Array[1] + Array[2];
 
-    std::cout << Result;
+        for (int i = 3; i <= Stairs; i++)
+        {
+            DP[i] = max(DP[i - 3] + Array[i - 1] + Array[i], DP[i - 2] + Array[i]);
+        }
+    }  
+
+    std::cout << DP[Stairs];
 }
