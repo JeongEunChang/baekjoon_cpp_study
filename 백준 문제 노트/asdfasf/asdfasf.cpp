@@ -1,81 +1,38 @@
-﻿#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#pragma warning (disable:4996)
+﻿#include <iostream>
+using namespace std;
 
+int n;
+const int maxi = 100001;
+const int mod = 9901;
+int zoo[maxi][3];//사자를 가두는 경우의 수
 
-void push(int x, int* cnt, int* stack);
-void pop(int* cnt, int* stack);
-void size(int cnt);
-void empty(int cnt);
-void top(int cnt, int* stack);
+//입력
+void input() {
+	cin >> n;
+}
 
-int main(void)
-{
-	int* stack;
-	int stack_size = 10;
-	int cnt = 0;
-	char* order[6];   // 문자 배열 사용  ---> 4ms,   char* order[6]; 사용시 0ms 나왔습니다.
-	int num;
-	int i;
-	int x;
+//사자를 가두는 경우의 수
+void Lion() {
+	//초기값
+	zoo[1][0] = 1;//선택x
+	zoo[1][1] = 1;//왼쪽 선택
+	zoo[1][2] = 1;//오른쪽 선택
 
-	stack = (int*)malloc(stack_size * sizeof(int));
-
-	scanf("%d", &num);
-
-	for (i = 0; i < num; i++)
-	{
-		scanf("%s", order);
-		if (strcmp(order, "push") == 0)
-		{
-			scanf("%d", &x);           // 어떻게 이것만 공백을 기준으로 나눌 지 몰라서
-			push(x, &cnt, stack);      // 버퍼에 남게된다는 것을 이용했습니다.
-		}
-		else if (strcmp(order, "pop") == 0) pop(&cnt, stack);
-		else if (strcmp(order, "size") == 0) size(cnt);
-		else if (strcmp(order, "empty") == 0) empty(cnt);
-		else if (strcmp(order, "top") == 0) top(cnt, stack);
-
-		if (cnt == stack_size)
-		{
-			stack_size += 10;
-			stack = (int*)realloc(stack, stack_size * sizeof(int));
-		}
+	//점화식
+	for (int i = 2; i <= n; i++) {
+		zoo[i][0] = (zoo[i - 1][0] + zoo[i - 1][1] + zoo[i - 1][2]) % mod;//선택X
+		zoo[i][1] = (zoo[i - 1][0] + zoo[i - 1][2]) % mod;//왼쪽 선택
+		zoo[i][2] = (zoo[i - 1][0] + zoo[i - 1][1]) % mod;//오른쪽 선택
 	}
-
-	free(stack);
+	//출력
+	cout << (zoo[n][0] + zoo[n][1] + zoo[n][2]) % mod;
 }
+int main() {
+	//빠른 입력
+	ios_base::sync_with_stdio(false);
+	cin.tie(0);
 
-void push(int x, int* cnt, int* stack)
-{
-	stack[*cnt] = x;
-	*cnt += 1;
-}
-
-void pop(int* cnt, int* stack)
-{
-	if (*cnt == 0) printf("%d\n", -1);
-	else
-	{
-		printf("%d\n", stack[*cnt - 1]);
-		*cnt -= 1;
-	}
-}
-
-void size(int cnt)
-{
-	printf("%d\n", cnt);
-}
-
-void empty(int cnt)
-{
-	if (cnt == 0) printf("%d\n", 1);
-	else printf("%d\n", 0);
-}
-
-void top(int cnt, int* stack)
-{
-	if (cnt == 0) printf("%d\n", -1);
-	else printf("%d\n", stack[cnt - 1]);
+	input();//입력
+	Lion();//사자를 가두는 경우의 수
+	return 0;
 }
