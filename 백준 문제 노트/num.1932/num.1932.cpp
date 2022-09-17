@@ -1,73 +1,44 @@
 ﻿#include <iostream>
-#include <stdio.h>
-#pragma warning (disable:4996)
-
+#include <algorithm>
 using namespace std;
 
-int Arr[126000];
-int vec[126000];
-int tmp;
-
-void MakeResultArr(int NowNode, int Sum, int Count, int& Result)
-{
-    Sum += vec[NowNode];
-
-    if ((NowNode + Count) > tmp - 1)
-    {
-        if (Sum > Result)
-            Result = Sum;
-        return;
-    }
-
-    if (Arr[NowNode] == 0)
-    {
-        Arr[NowNode] = Sum;
-    }
-
-    else if (Arr[NowNode] != 0)
-    {
-        if (Arr[NowNode] < Sum)
-        {
-            Arr[NowNode] = Sum;
-        }
-
-        else
-            return;
-    }
-
-    Count++;
-
-    MakeResultArr(NowNode + Count, Sum, Count, Result);
-    MakeResultArr(NowNode + Count + 1, Sum, Count, Result);
-}
+int Array[3211311];
+int DP[3211311];
+int N, TriangleArrSize, Max;
 
 int main()
-{
-    int TriangleSize = 0;
-    int Sum = 0;
-    int Count = 0;
-    int NowNode = 0;
-    int Result = 0;
-    
-    scanf("%d", &TriangleSize);
+{    
+    cin >> N;
 
-    for (int i = 1; i <= TriangleSize; i++)
+    for (int i = 1; i <= N; i++)
     {
-        tmp += i;
+        TriangleArrSize += i;
     }
 
-    for (int i = 0; i < tmp; i++)
+    for (int i = 1; i <= TriangleArrSize; i++)
     {
-        int Input;
-
-        scanf("%d", &Input);
-
-        vec[i] = Input;
+        cin >> Array[i];
     }
 
-    MakeResultArr(NowNode, Sum, Count, Result);
+    DP[1] = Array[1];
 
-    
+    int Index = 1;
 
-    printf("%d", Result);
+    for (int i = 1; i < N; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            DP[Index + i] = max(DP[Index] + Array[Index + i], DP[Index + i]);
+            DP[Index + i + 1] = max(DP[Index] + Array[Index + i + 1], DP[Index + i + 1]);
+            Index++;
+        }
+    }
+
+    for (int i = (TriangleArrSize - N) + 1; i <= TriangleArrSize; i++)
+    {
+        if (DP[i] > Max)
+            Max = DP[i];
+    }
+
+    cout << Max;
 }
