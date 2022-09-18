@@ -1,2 +1,3 @@
 ﻿  asdfasf.cpp
+C:\Users\jec99\Documents\GitHub\baekjoon_cpp_study\백준 문제 노트\asdfasf\asdfasf.cpp(15,9): warning C4101: 'fianlAnswer' :참조되지 않은 지역 변수입니다.
   asdfasf.vcxproj -> C:\Users\jec99\Documents\GitHub\baekjoon_cpp_study\백준 문제 노트\x64\Debug\asdfasf.exe
